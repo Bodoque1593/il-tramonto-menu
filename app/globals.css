@@ -7205,3 +7205,256 @@ main.category-page .product-card-image img {
   background: rgba(40, 40, 40, 0.88);
   color: #ffffff;
 }
+
+/* =========================================================
+   GESTOR OFERTA DEL MES
+   ========================================================= */
+
+.featured-admin-panel {
+  width: min(100%, 1200px);
+  margin: 25px auto 35px;
+  padding: 32px;
+  border: 1px solid rgba(189, 138, 37, 0.35);
+  background: rgba(255, 253, 248, 0.96);
+}
+
+.featured-admin-header {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+  align-items: flex-start;
+  margin-bottom: 30px;
+}
+
+.featured-admin-header span {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 11px;
+  letter-spacing: 3px;
+  color: #bd8a25;
+}
+
+.featured-admin-header h2 {
+  margin: 0;
+  font-family: Georgia, serif;
+  font-size: 34px;
+  font-weight: 400;
+  color: #382d26;
+}
+
+.featured-admin-header p {
+  margin: 8px 0 0;
+  color: #706860;
+}
+
+.featured-admin-close {
+  width: 38px;
+  height: 38px;
+  border: 1px solid rgba(56, 45, 38, 0.2);
+  background: transparent;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.featured-admin-message {
+  margin-bottom: 25px;
+  padding: 14px 18px;
+  border: 1px solid rgba(189, 138, 37, 0.3);
+  background: rgba(189, 138, 37, 0.08);
+  color: #59472d;
+}
+
+.featured-admin-grid {
+  display: grid;
+  grid-template-columns: 320px 1fr;
+  gap: 35px;
+}
+
+.featured-admin-image {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+
+.featured-admin-image img,
+.featured-admin-image-empty {
+  width: 100%;
+  height: 390px;
+  object-fit: cover;
+  border: 1px solid rgba(189, 138, 37, 0.3);
+}
+
+.featured-admin-image-empty {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #e8e2d7;
+  color: #81796f;
+  letter-spacing: 2px;
+}
+
+.featured-admin-upload {
+  margin-top: 12px;
+  padding: 12px;
+  border: 1px solid rgba(189, 138, 37, 0.45);
+  background: transparent;
+  text-align: center;
+  font-size: 11px;
+  letter-spacing: 1.5px;
+  cursor: pointer;
+}
+
+.featured-admin-image small {
+  margin-top: 8px;
+  color: #81796f;
+  text-align: center;
+}
+
+.featured-admin-fields {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.featured-admin-field {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.featured-admin-field label {
+  font-size: 11px;
+  letter-spacing: 2px;
+  color: #8b672c;
+}
+
+.featured-admin-field input,
+.featured-admin-field textarea {
+  width: 100%;
+  padding: 14px;
+  border: 1px solid rgba(56, 45, 38, 0.2);
+  background: #fffdfa;
+  color: #382d26;
+  font-family: inherit;
+  font-size: 15px;
+  outline: none;
+}
+
+.featured-admin-field textarea {
+  resize: vertical;
+}
+
+.featured-admin-field input:focus,
+.featured-admin-field textarea:focus {
+  border-color: #bd8a25;
+}
+
+.featured-admin-field small {
+  color: #81796f;
+  font-size: 12px;
+}
+
+.featured-admin-two-columns {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+}
+
+.featured-admin-active {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  font-size: 12px;
+  letter-spacing: 1.5px;
+  color: #59472d;
+}
+
+.featured-admin-active input {
+  width: 18px;
+  height: 18px;
+  accent-color: #bd8a25;
+}
+
+.featured-admin-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  margin-top: 30px;
+  padding-top: 25px;
+  border-top: 1px solid rgba(56, 45, 38, 0.12);
+}
+
+.featured-admin-cancel,
+.featured-admin-save {
+  padding: 14px 22px;
+  border: 1px solid rgba(189, 138, 37, 0.5);
+  cursor: pointer;
+  font-size: 11px;
+  letter-spacing: 1.5px;
+}
+
+.featured-admin-cancel {
+  background: transparent;
+  color: #59472d;
+}
+
+.featured-admin-save {
+  background: #bd8a25;
+  color: white;
+}
+
+.featured-admin-save:disabled,
+.featured-admin-cancel:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.products-admin-featured-button {
+  border-color: rgba(189, 138, 37, 0.65);
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 700px) {
+
+  .featured-admin-panel {
+    margin: 20px 12px 30px;
+    padding: 22px 18px;
+  }
+
+  .featured-admin-header {
+    gap: 15px;
+  }
+
+  .featured-admin-header h2 {
+    font-size: 27px;
+  }
+
+  .featured-admin-grid {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+
+  .featured-admin-image img,
+  .featured-admin-image-empty {
+    height: 300px;
+  }
+
+  .featured-admin-two-columns {
+    grid-template-columns: 1fr;
+  }
+
+  .featured-admin-actions {
+    flex-direction: column-reverse;
+  }
+
+  .featured-admin-cancel,
+  .featured-admin-save {
+    width: 100%;
+  }
+
+}

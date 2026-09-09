@@ -4,6 +4,7 @@ import { ChangeEvent, useEffect, useState } from "react";
 import { supabase } from "@/lib/supabase";
 import NewProductForm from "./NewProductForm";
 import CategoryManager from "./CategoryManager";
+import FeaturedContentManager from "./FeaturedContentManager";
 
 interface Product {
   id: number;
@@ -49,6 +50,8 @@ export default function ProductsAdmin() {
   const [message, setMessage] = useState("");
   const [showNewProduct, setShowNewProduct] = useState(false);
   const [showCategories, setShowCategories] = useState(false);
+  const [showFeatured, setShowFeatured] =
+  useState(false);
 
   const [search, setSearch] = useState("");
   const [selectedCategory, setSelectedCategory] =
@@ -719,7 +722,17 @@ export default function ProductsAdmin() {
         </div>
 
         <div className="products-admin-actions">
-
+<button
+  type="button"
+  onClick={() =>
+    setShowFeatured((current) => !current)
+  }
+  className="products-admin-button products-admin-featured-button"
+>
+  {showFeatured
+    ? "CERRAR OFERTA"
+    : "⭐ OFERTA DEL MES"}
+</button>
           <button
             type="button"
             onClick={() =>
@@ -771,6 +784,23 @@ export default function ProductsAdmin() {
           }}
         />
       )}
+
+      {showFeatured && (
+  <FeaturedContentManager
+    onClose={() =>
+      setShowFeatured(false)
+    }
+    onSaved={() => {
+      setMessage(
+        "Oferta del mes actualizada correctamente."
+      );
+
+      window.setTimeout(() => {
+        setMessage("");
+      }, 3000);
+    }}
+  />
+)}
 
       {message && (
         <div className="products-admin-message">
