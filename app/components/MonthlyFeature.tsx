@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import Link from "next/link";
+
 
 interface FeaturedContent {
   id: number;
@@ -100,21 +100,11 @@ export default function MonthlyFeature({
               {featured.price.toLocaleString("es-CO")}
             </div>
           )}
+          <div className="monthly-question">
+  ¿Te antoja? Pregunta al mesero.
+</div>
 
-          {featured.button_text &&
-            featured.button_url && (
-              <Link
-                href={featured.button_url}
-                className="monthly-button"
-                onClick={() => setVisible(false)}
-              >
-                {featured.button_text}
-
-                <span>
-                  →
-                </span>
-              </Link>
-            )}
+        
 
         </div>
 

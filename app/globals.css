@@ -7460,3 +7460,11 @@ main.category-page .product-card-image img {
   }
 
 }
+
+.monthly-question {
+  margin-top: 14px;
+  font-size: 0.9rem;
+  font-style: italic;
+  letter-spacing: 0.04em;
+  opacity: 0.72;
+}
