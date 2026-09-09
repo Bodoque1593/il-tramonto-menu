@@ -1216,6 +1216,8 @@ a {
   background: #e6dfd2;
 
   border: 0;
+
+  border-radius: 24px;
 }
 
 .product-main-image img,
